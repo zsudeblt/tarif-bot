@@ -1,0 +1,19 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'{bot.user} olarak giriş yaptık')
+
+bot.command()
+async def kek(ctx):
+    await ctx.send("içindekiler:3 adet yumurta.1 su bardağı şeker,Yarım su bardağı sıvı yağ,1 su bardağı süt,1 paket kabartma tozu,1 paket vanilya,Un ")
+    await ctx.send("yapılışıHazırladğımız sade kek hamurumu yağlanmış kek kalıbına dökülür. 160 derecede önceden ısıtılmış fırında yaklaşık 50 dk kadar kontrollü bir şekilde pişirilir. Pişirme esnasında ilk 30 dk kapağı açmayalım. 30 dk sonrasında da kabarmış ve üzeri pembeleşmiş kekimizi gözlemlemeye başlayabilirsiniz.:")
+
+
+bot.run("MTE3NTg2MTgxODQ5Nzk3ODM2OA.GghHWj.EnV5EbNDFEI932_-VzPo-Vanpwi21lcMF1emeY")
